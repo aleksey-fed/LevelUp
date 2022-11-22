@@ -36,31 +36,19 @@ body {
   align-items: center;
   
   width: 100%;
-  min-height: 400px;
 
-  background: linear-gradient(#9198e5, #fdbd32);
+  background: #808080;
 }
 
 .back-video {
   position: absolute;
   right: 0;
   bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover ;
 
   z-index: -1;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .back-video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .back-video {
-    width: auto;
-    height: 100%;
-  }
 }
 
 .promo__title {
@@ -472,4 +460,92 @@ input[type='submit'] {
 .name::placeholder,
 .phone::placeholder {
   color:#808080;
+}
+
+@media only screen and (max-width: 991px) {
+  .section {
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 600px; 
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+  }
+
+  .promo__image,
+  .description__wrapper {
+    width: 100%;
+  }
+
+  .promo__image {
+    padding: 15px;
+  }
+
+  .promo__image .image {
+    width: 70px;
+  }
+
+  .product .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product__ingredients {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .ingredients__item {
+    flex-direction: row;
+  }
+
+  .ingredients__item .circle {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .product__image {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .product__image .image {
+    width: 70px;
+  }
+
+  .second-promo__wrapper {
+    flex-direction: column;
+  }
+
+  .second-promo__image {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .second-promo__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-promo__list .list__item {
+    font-size: 1.2em;
+  }
+
+  .order__wrapper {
+    flex-direction: column;
+  }
+
+  .order__wrapper .price__wrapper {
+    width: 100%;
+  }
+
+  .order__wrapper .order-contact {
+    width: 100%;
+  }
 }
